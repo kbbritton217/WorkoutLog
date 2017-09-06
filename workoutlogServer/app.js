@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var sequelize = require('./db.js');
 var User = sequelize.import(__dirname + '\\models\\user');
 
-//User.sync();
+//User.sync(); // reads whats in the database
 /****** THIS WILL DROP (DELETE) THE USER TABLE ******/
 //User.sync({force:true}); //drops the tale completely 
 sequelize.sync();
