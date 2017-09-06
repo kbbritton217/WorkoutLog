@@ -8,21 +8,16 @@
 		<title>Workout Log</title>
 
 		<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
-		<script src="./bower_components/jquery/dist/jquery.min.js"></script>
-
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		
 		
 	</head>
 	<body>
 		<ul class="nav nav-tabs">
 			<li><a href="#home" id="loginout" class="disabled" data-toggle="tab">Login</a></li>
-			<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+			<!--<li class="active"><a href="#home" data-toggle="tab">Home</a></li>-->
 			<li><a href="#define" data-toggle="tab">Define</a></li>
 			<li><a href="#log" data-toggle="tab">Log</a></li>
 			<li><a href="#history" data-toggle="tab">View History</a></li>
-			<li><a href="#" id="testAPI">Test API</a></li>
 		</ul>
 
 		<div class="container">
@@ -34,7 +29,7 @@
 						<button data-toggle="modal" data-target="#signup-modal" class="btn btn-primary">Sign Up</button>
 					</div>
 					<div id="forLogout" style="display:none;">
-						<button class="btn btn-primary"></button>
+						<button class="btn btn-primary">Logout</button>
 					</div>
 				</div>
 			</div>
@@ -49,9 +44,9 @@
 			 		<div class="modal-body">
 			 			<div class="alert alert-danger" style="display: none;" role="alert" id="li_error"></div>
 			 			<label for="li_username">Username:</label>
-			 			<input class="form-control" id="li_username"/>
+			 			<input id="li_username"/>
 			 			<label for="li_password">Password:</label>
-			 			<input type="password" class="form-control" id="li_password"/>
+			 			<input type="password" id="li_password"/>
 			 		</div>
 			 		<div class="modal-footer">
 			 			<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -70,9 +65,9 @@
 			 		<div class="modal-body">
 			 			<div class="alert alert-danger" style="display: none;" role="alert" id="su_error"></div>
 			 			<label for="su_username">Username:</label>
-			 			<input class="form-control" id="su_username"/>
+			 			<input id="su_username"/>
 			 			<label for="su_password">Password:</label>
-			 			<input type="password" class="form-control" id="su_password"/>
+			 			<input type="password" id="su_password"/>
 			 		</div>
 			 		<div class="modal-footer">
 			 			<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
@@ -81,8 +76,13 @@
 			 	</div>
 			 </div>
 		</div>
-		<script type="text/javascript" src="./app.js"></script>
-		<script type="text/javascript" src="./user/auth.js"></script>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+		<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="./app.js"></script>
+		<script src="./user/auth.js"></script>
 	</body>
 </html>
-
