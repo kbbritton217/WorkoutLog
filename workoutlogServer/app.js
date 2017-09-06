@@ -5,10 +5,10 @@ var bodyParser = require('body-parser');
 var sequelize = require('./db.js');
 var User = sequelize.import(__dirname + '\\models\\user');
 
-User.sync();
+//User.sync();
 /****** THIS WILL DROP (DELETE) THE USER TABLE ******/
-User.sync({force:true}); //drops the tale completely 
-
+//User.sync({force:true}); //drops the tale completely 
+sequelize.sync();
 app.use(bodyParser.json());
 
 app.use(require('./middleware/headers'));
